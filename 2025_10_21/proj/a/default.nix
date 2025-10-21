@@ -9,6 +9,7 @@ stdenv.mkDerivation {
   src = builtins.fetchTarball {
     url = "http://gnu.mirror.constant.com/hello/hello-2.9.tar.gz";
     name = "hello";
+    sha256 = "sha256:1bxh8nnv7ic76jdm91r106pbj2fdv42fj88pya8xl5vss16m58fm";
   };
   # src = ./hello-2.9;
   doCheck = true;

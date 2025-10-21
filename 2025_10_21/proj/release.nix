@@ -1,5 +1,8 @@
+{
+  pkgs ? import <nixpkgs> {},
+  ...
+}:
 let
-  pkgs = import <nixpkgs> {};
   default = pkgs.callPackage ./a {};
   wclang = pkgs.lib.callPackageWith {stdenv=(pkgs.overrideCC pkgs.stdenv pkgs.clangStdenv.cc);};
 in
