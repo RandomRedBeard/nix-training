@@ -101,3 +101,47 @@ Check trivial builders
 
 mkShell - Try not to fill up shellHooks
 inputsFrom pulls nativeBuildInputs and buildInputs (NOTE checkInputs)
+
+can get python packages across version without clashes
+
+
+runCommand - easily execute shell without any phases
+
+-- NIX PROJECTS --
+
+a/default.nix
+b/default.nix
+nix/overlay.nix
+nix/sources.nix
+
+flake.nix
+default.nix - nice guy move
+release.nix - Pulls all default nix's (a b c)
+shell.nix - nice guy move
+
+
+mp = pkgs.lib.callPackageWith {x=1; y=2;}
+foo = mp f {z=100;}
+nix-repl> foo
+{
+  override = { ... };
+  overrideDerivation = «lambda overrideDerivation @ /nix/store/4878dzkl1bdxv6wqavzy7bdracvl9q16-source/lib/customisation.nix:177:32»;
+  result = 103;
+}
+
+
+release.nix should be "the world"
+if you build the release.nix, expect to build everything
+
+
+
+-- OVERRIDE --
+
+override vs overrideAttrs
+
+override changes inputs
+overrideAttrs changes drv attrs
+
+overrideAttrs for adding patches
+override for setting inputs (like stdenv)
+
