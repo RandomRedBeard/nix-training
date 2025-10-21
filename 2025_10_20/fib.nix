@@ -1,0 +1,7 @@
+let
+  fib = x: builtins.trace "fib ${builtins.toString x}" (
+    if x == 0 then 0
+    else if x == 1 then 1
+    else fib (x - 1) + fib (x - 2));
+in
+  fib
