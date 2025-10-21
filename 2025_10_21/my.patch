@@ -1,0 +1,24 @@
+diff -ru hello-2.9/src/hello.c hello-2.9/src/hello.c
+--- hello-2.9/src/hello.c	2013-10-09 16:32:49.000000000 -0700
++++ hello-2.9/src/hello.c	2025-10-21 11:19:08.416719254 -0700
+@@ -47,7 +47,7 @@
+ {
+   int optc;
+   int lose = 0;
+-  const char *greeting_msg = _("Hello, world!");
++  const char *greeting_msg = _("Hello, thomas!");
+   wchar_t *mb_greeting;
+   size_t len;
+   greeting_type g = greet_traditional;
+diff -ru hello-2.9/tests/hello-1 hello-2.9/tests/hello-1
+--- tmp/hello-2.9/tests/hello-1	2012-01-06 23:44:35.000000000 -0800
++++ hello-2.9/tests/hello-1	2025-10-21 11:23:53.583918820 -0700
+@@ -21,7 +21,7 @@
+ 
+ tmpfiles="hello-test1.ok"
+ cat <<EOF > hello-test1.ok
+-Hello, world!
++Hello, thomas!
+ EOF
+ 
+ tmpfiles="$tmpfiles hello-test1.out"

@@ -4,5 +4,5 @@
 cp $src/* .
 
 mkdir -p $out/bin
-make -C $src
+make
 mv mini-hello $out/bin
