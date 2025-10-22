@@ -12,5 +12,5 @@
       system = "x86_64-linux";
     };
   in
-  import ./proj/release.nix { inherit pkgs; };
+  pkgs.callPackage ./proj/release.nix { };
 }
