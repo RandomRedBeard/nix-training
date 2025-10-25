@@ -32,3 +32,10 @@ provide overrides to everyone without specifying the override per package
 add packages
 
 
+-- FLAKES --
+Cached evaluation
+no NIX_PATH or builtins.currentSystem
+registry instead of channels
+builtin pinning
+
+
